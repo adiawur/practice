@@ -1,0 +1,24 @@
+<header>
+  <h1 class="h1">Welcome To Restaurant </h1><br>
+  <nav>
+      <button routerLink="/login">Login</button>
+    <button routerLink="/register">signup</button>
+  </nav>
+</header>
+<div class="container">
+    <div class="login-form">
+      <h1>Welcome back!</h1>
+      <form [formGroup]="userlogin"  (ngSubmit)="onsave()">
+        <div class="input-group">
+          <input type="email" placeholder="Email address" formControlName="email" required>
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Password"  formControlName="password" required>
+        </div>
+        <button class="login-btn" type="submit" (click)=" onsave()">Login</button>
+      </form>
+      <p>Don't have an account? <a routerLink="/register">Sign up first</a>
+      </p>
+    </div>
+  </div>
+ 

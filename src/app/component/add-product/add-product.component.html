@@ -1,0 +1,33 @@
+<header>
+  <h1>Welcome To Food menu Restaurant</h1><br>
+  <nav>
+    <a routerLink="/add-product">Add Product</a>
+    <a routerLink="/product">Product</a>
+    <a routerLink="/login">Logout</a>
+  </nav>
+</header>
+
+<div class="product-add-container">
+  <h2>Add Product</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSave()">
+    <div class="form-group">
+      <label for="foodname">Food Name</label>
+      <input type="text" id="foodname" formControlName="foodname" required>
+    </div>
+    <div class="form-group">
+      <label for="foodtype">Food Type</label>
+      <input type="text" id="foodtype" formControlName="foodtype" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" formControlName="description" required>
+    </div>
+    <div class="form-group">
+      <label for="payment">Payment</label>
+      <input type="text" id="payment" formControlName="payment" required>
+    </div>
+    <button type="submit">Add Product</button>
+    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </form>
+</div>

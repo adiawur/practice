@@ -1,0 +1,33 @@
+<header>
+    <h1 class="h1">Welcome To Restaurant</h1><br>
+    <nav>
+      <button routerLink="/login">Login</button>
+      <button routerLink="/sign-up">Sign Up</button>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <div class="login-form">
+      <h1>Welcome!</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="input-group">
+          <input type="text" id="fullName" placeholder="Your full name" formControlName="username" required>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email address" formControlName="email" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" formControlName="password" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="confirmPassword" placeholder="Confirm password" formControlName="confirmPassword" required>
+        </div>
+        <div class="input-group">
+          <input type="text" id="role" placeholder="Role" formControlName="role" required>
+        </div>
+        <button class="login-btn" type="submit">Register</button>
+      </form>
+      <div *ngIf="error" class="error">{{ error }}</div>
+    </div>
+  </div>
+  

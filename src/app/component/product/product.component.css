@@ -1,0 +1,73 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+header nav input {
+  padding: 5px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+header nav button {
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.header-links {
+  display: flex;
+}
+
+.header-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+h1 {
+  background-color: #333;
+  color: white;
+}
+
+
+.product-list-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+  
